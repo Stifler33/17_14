@@ -7,7 +7,7 @@ void swap(int *a, int *b){
 }
 int main() {
     int a = 5;
-    int b = 1;
+    int b = 13;
     swap(&a,&b);
     std::cout << a << " " << b;
     return 0;
