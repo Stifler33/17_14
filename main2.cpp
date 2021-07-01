@@ -12,6 +12,6 @@ int* turn(int* a){
 int main(){
    int arr[] = {1,2,3,4,5,6,7,8,9,10};
    int* newArr = turn(arr);
-   std::cout << *(newArr + 0) << " " << *(arr + 0);
+   std::cout << newArr << " " << arr;
     return 0;
 }
