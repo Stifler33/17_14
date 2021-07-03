@@ -1,11 +1,9 @@
 #include <iostream>
-int lenA;
-int lenB;
 bool substr(char* a, char* b){
     bool finish = false;
-    for (int i = 0; i < lenA && !finish; i++){
+    for (int i = 0; a[i] != '\0'; i++){
         if (a[i] == b[0]){
-            for (int countB = 0, countA = i; countB < lenB; countB++, countA++){
+            for (int countB = 0, countA = i; b[countB] != '\0'; countB++, countA++){
                 if (b[countB] != a[countA]){
                     finish = false;
                     break;
@@ -16,12 +14,10 @@ bool substr(char* a, char* b){
     return finish;
 }
 int main(){
-    char* a = "nut surer mus";
+    char* a = "nut Suer mup";
     char* b = "up";
     char* c = "Sup";
     char* d = "nut";
-    for (lenA = 0; a[lenA] != '\0'; lenA++);
-    for (lenB = 0; b[lenB] != '\0'; lenB++);
     if (substr(a,b)){
         std::cout << "1 yes" << "\n";
     }
